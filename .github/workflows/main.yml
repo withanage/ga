@@ -1,8 +1,11 @@
-name: hello-world
+name: environment variables
 on: push
 jobs:
-  my-job:
+  repo-name:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        channel: [ "${{ github.event.repository.name }}"]
     steps:
-      - name: my-step
-        run: echo ${{ github.event.repository.name }}
+    - name: "Echo REpo name "
+      run: echo ${{ github.event.repository.name }}
