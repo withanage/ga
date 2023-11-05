@@ -8,4 +8,4 @@ jobs:
         repo: [ "${{ github.event.repository.name }}"]
     steps:
     - name: "Echo REpo name "
-      run: echo $repot
+      run: echo $repo
