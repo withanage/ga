@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        channel: [ "${{ github.event.repository.name }}"]
+        repo: [ "${{ github.event.repository.name }}"]
     steps:
     - name: "Echo REpo name "
-      run: echo ${{ github.event.repository.name }}
+      run: echo $repot
